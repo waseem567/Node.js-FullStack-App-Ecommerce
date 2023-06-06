@@ -1,0 +1,45 @@
+<%if(productDetail){ %>
+    <div class="col-12 mt-4">   
+            <div class="productBox rounded">
+                <div class="product_title"><%= products.title %></div>
+                <div class="product_image_detail">
+                    <img src="/<%= products.image %>" alt="image">
+                </div>
+                <div class="product_price_detail"><%= products.price %> $</div>
+                <div class="product_description px-2 py-1"><%= products.description %></div>
+                <input type="hidden" name="product_id" value="<%= products._id %>">
+                <div>
+                    <%- include('add-to-cart.ejs' , {product : products})  %>
+                </div>
+            </div>
+        </a>
+    </div>
+<% } else{ %>
+    <% for (product of products) { %>
+        <div class="col-md-4 mt-4 rounded-lg">
+            <a class="image_link" href="/<%= product._id %>">    
+                <div class="productBox">
+                    <div class="product_title"><%= product.title %></div>
+                    <div class="product_image">
+                        <img src="/<%= product.image %>" alt="picture">
+                    </div>
+                    <div class="product_price"><%= product.price %> $</div>
+                    <div class="product_description px-2 py-1"><%= product.description %></div>
+                    <input type="hidden" name="product_id" value="<%= product._id %>">
+                    <div>
+                        <%- include('./add-to-cart.ejs' , {product : product})  %>
+                        <a href="/<%= product._id %>" class="btn det_button">Details</a>
+                        <% if(path === '/admin-products'){ %>
+                            <a href="/edit/<%= product._id %>" class="btn det_button">Edit</a>
+                            <form class="delete_form" method="POST">
+                                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                <input class="btn delete_button" type="submit" value="Delete">
+                                <input type="hidden" name="productId" value="<%= product._id %>">
+                            </form>
+                        <%}%>
+                      </div>
+                </div>
+            </a>
+        </div>
+        <% } %>        
+<% } %>

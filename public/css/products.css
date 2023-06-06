@@ -1,0 +1,12 @@
+body{
+    background: #000;
+}
+.bgLightBlack{
+    background: #443f3f;
+    color: rgb(9, 60, 245);
+    text-transform: capitalize;
+    margin: 0;
+}
+.bgLight{
+    background: #443f3f;
+}

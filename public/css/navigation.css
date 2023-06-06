@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar{
+    width: 5px;
+    background: #222020;
+}
+::-webkit-scrollbar-thumb{
+    background: rgb(238, 72, 12);
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #443f3f;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 0px;
+}
+nav ul li{
+    list-style: none;
+    margin: 0px 10px;
+}
+nav ul li a , .logout__button , #categories{
+    background: #443f3f;
+    border: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    color: white;
+    display: inline-block;
+    padding: 8px 0px;
+    height: 100%;
+}
+nav ul li a:hover{
+    border-bottom: 2px solid rgb(239, 2, 46);
+    color: rgb(243, 129, 88);
+}
+.logButton{
+    display: flex;
+    justify-content: space-around;
+}
+.active {
+    border-bottom: 2px solid rgb(239, 2, 46);
+    color: orangered;
+}
+.email {
+    color: aliceblue;
+}
+.logout__button{
+    background: inherit;
+    border: none;
+}
+.logButton__form{
+    display: inline;
+    margin-right: 6px;
+}

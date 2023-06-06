@@ -1,0 +1,18 @@
+<%- include ('../includes/header.ejs')%>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/products-list.css">
+<%- include ('../includes/navigation.ejs')%>
+<div class="container rounded mt-2">
+    <% if (!productDetail) {%>
+    <%- include ('../includes/search.ejs')%>
+    <div class="row rounded bgLight py-3">
+        <div class="col-6 filter text-white">Filter</div>
+        <div class="col-6 text-end filterIcon text-white">Icon</div>
+    </div>
+    <% } %>
+    <div class="row">
+    <%- include ('../includes/products-list.ejs' , {products : products, auth : auth})%>
+    </div>
+</div>
+
+<%- include ('../includes/footer.ejs')%>

@@ -1,0 +1,58 @@
+<%- include ('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/login_signup.css" />
+<%- include ('../includes/navigation.ejs')%>
+<div class="wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4">
+        <form class="form" action="/signup" method="POST">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <input
+            value="<%= oldInputValue.email %>"
+            name="email"
+            class="form-control <% for (msg of errorMessage){ %> <% if(msg.param === 'email'){ %> invalid <% } %> <% } %>"
+            type="text"
+            placeholder="Enter Your email here"
+          />
+
+          <input
+            value="<%= oldInputValue.password%>"
+            name="password"
+            class="form-control <% for (msg of errorMessage){ %>
+                <% if(msg.param === 'password'){ %>
+                    invalid
+                <%  } %>
+                <%  } %>"
+            type="password"
+            placeholder="Enter Your password here"
+          />
+          <input
+            value="<%= oldInputValue.confirmPassword %>"
+            name="confirmPassword"
+            class="form-control <% for (msg of errorMessage){ %>
+                <% if(msg.param === 'password'){ %>
+                    invalid
+                <%  } %>
+                <%  } %>"
+            type="password"
+            placeholder="Enter Your password again"
+          />
+          <% if( errorMessage.length > 0) {%> <% for (msg of errorMessage) { %>
+          <% if (msg.param === 'email') { %>
+          <div class="text-danger">* <%= msg.msg %></div>
+          <% } %> <% if (msg.param === 'password') { %>
+          <div class="text-danger my-2">* <%= msg.msg %></div>
+          <% } %> <% } %>
+          <% if (msg.param === 'confirmPassword') { %>
+            <div class="text-danger">* <%= msg.msg %></div>
+            <% } %>
+             <% } %>
+          <% if(errMessage){ %>
+            <div class="text-danger">* <%= errMessage %></div>
+            <% } %>
+          <button class="btn btn__bg" type="submit">Signup</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

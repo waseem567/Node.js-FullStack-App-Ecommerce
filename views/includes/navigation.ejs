@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="/css/navigation.css">
+</head>
+    <body>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="/" class="<%= path === '/' ? 'active' : ''%>">Products</a></li>
+                    <li><a href="/cart" class="<%= path === '/cart' ? 'active' : ''%>">Cart</a></li>
+                    <% if(auth){ %>
+                    <li><a href="/add-product" class="<%= path === '/add-product' ? 'active' : ''%>">Add Product</a></li>
+                    <li><a href="/admin-products" class="<%= path === '/admin-products' ? 'active' : ''%>">Admin Products</a></li>
+                    <li><a href="/orders" class="<%= path === '/orders' ? 'active' : ''%>">Orders</a></li>
+                    <%}%> 
+                </ul>
+            </div>
+            <div class="logButton">
+                <% if(!auth){ %>
+                <ul>
+                    <li><a class="<%= path === '/login' ? 'active' : ''%>" href="/login">Login</a></li>
+                    <li><a class="<%= path === '/signup' ? 'active' : ''%>" href="/signup">Signup</a></li>
+                </ul>
+                <%}%>
+                <% if(auth){ %>
+                <form class="logButton__form" action="/logout" method="POST">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <button type="submit" class="<%= path === '/logout' ? 'active' : ''%> logout__button">Logout</button>
+                </form>
+                <%}%>
+            </div>
+        </nav>

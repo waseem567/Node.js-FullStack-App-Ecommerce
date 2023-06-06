@@ -1,0 +1,57 @@
+<%- include ('../includes/header.ejs')%>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/products-list.css">
+<%- include ('../includes/navigation.ejs' , {auth : auth})%>
+<div class="container mt-2">
+    <div class="row justify-content-center">
+     <div class="col-md-8">
+        <form action="/check-out" method="post" class="form w-100 d-block checkout-form">
+        
+                <div class="row">
+                    <div class="col m-4">
+                        <input class="d-block w-100" type="text" placeholder="Enter name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m-4">
+                        <input class="d-block w-100" type="text" placeholder="Enter address">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m-4">
+                        <input class="d-block w-100" type="text" placeholder="Card holder name">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m-4">
+                        <input class="d-block w-100" type="text" placeholder="Card number">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-5 m-4">
+                        <input class="d-block w-100" type="text" placeholder="Expiration month">
+                    </div>
+                    <div class="col-md-5 m-4">
+                        <input class="d-block w-100" type="text" placeholder="Expiration year">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m-4">
+                        <input class="d-block w-100" type="text" placeholder="CVC m-4">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col m-4">
+                        <button class="btn btn-primary d-block w-100 p-3" id="order_btn" type="submit" >CHECK OUT!!!</button>
+                    </div>
+                    <div>
+                    
+                    </div>
+                </div>
+          
+        </form>
+     </div>  
+    </div>
+</div>
+
+<%- include ('../includes/footer.ejs')%>

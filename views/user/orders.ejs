@@ -1,0 +1,29 @@
+<%- include ('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/orders.css">
+<%- include ('../includes/navigation.ejs')%>
+<div class="container">
+    <% if (orders.length > 0){ %>
+    <h1 class="text-white">Your Orders Here...</h1>
+    <% for (order of orders) { %>
+    <div class="order">
+        <div class="order__id">
+            <%= order._id%>
+        </div>
+        <h2 class="order__quantity">
+          Quantity :  <%= order.quantity %>
+        </h2>
+        <h3 class="order__items">Items : <%= order.items %></h3>
+        <h4 class="order__price">Amount : <%= order.amount %> $</h4>
+        <form action="/deleteOrder" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <input type="hidden" name="deleteOrderId" value="<%= order._id %>">
+        <h5 class="delete__order text-white"><button type="submit"><img class="delete__logo" src="/images/remove.png" alt="delete"></button></h5>
+    </form>
+    </div>
+    <% } %>
+    <% } else { %>
+        <h1 class="text-white text-center">No order made...</h1>
+    <% } %>    
+</div>
+
+<%- include ('../includes/footer.ejs')%>

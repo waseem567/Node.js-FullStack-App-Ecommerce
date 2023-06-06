@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Elsie&family=Varela+Round&display=swap');
+body{
+    background: #000;
+}
+.greengrad{
+    background: rgb(14, 183, 17);
+}
+.blueNav{
+    background: rgb(75, 64, 173);
+    color: white;
+}
+.fv{
+    font-family: 'Lato', sans-serif;
+}
+.fw_600{
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: rgb(241, 6, 6);
+}
+.optionDiv{
+    background: rgb(10, 177, 13);
+    color: white !important;
+    transition: .5s;
+    transform-origin: center;
+}
+.optionDiv:hover{
+    background: rgb(12, 240, 15);
+    cursor: pointer;
+}
+.h_100{
+    height: 100vh;
+}
+.divTow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    font-size: 35px;
+    color: red;
+}
+.marginTop{
+    margin-top: 74px;
+    
+}
+.num{
+    font-weight: 700;
+    font-size: 50px;
+}
+.bgRed{
+    background: rgb(230, 35, 35);
+}
+.w_30{
+    width: 31%;
+}
+.bgOrg{
+    background: orange;
+}
+.clrOrg{
+    color: orange;
+}
+.bgBlu{
+    background: rgb(26, 13, 219);
+}
+.bgBlu2{
+    background: rgb(75, 64, 173);
+}
+.clrBlu{
+    color:rgb(26, 13, 219);
+}
+.marginAdjust{
+    margin-top: 120px;
+}
+th{
+    font-weight: 600 !important;
+}
+tr{
+    color: white;
+    overflow: hidden;
+    max-width: 100px;
+}
+.greenSpan{
+    background: green;
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+.redSpan{
+    background: rgb(236, 14, 14);
+    color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 3px;
+    border-radius: 7px;
+    font-weight: 600;
+}
+.fontVarela{
+    font-family: 'Varela Round', sans-serif;
+}
+@media screen and (max-width : 600px) {
+    .boxes__conatiner{
+        display: block !important;
+    }
+    .w_30{
+        margin-top: 5px;
+        display: block !important;
+        width: 95vw;
+    }
+}

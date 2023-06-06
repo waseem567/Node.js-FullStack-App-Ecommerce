@@ -1,0 +1,9 @@
+<div class="cart-footer">
+    <form method="POST" action="/orders">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <input type="submit" value="Order Now" class="order__button" id="order_input_btn">
+        <input type="hidden" name="totalPrice" value="<%= totalPrice %>">
+        <input type="hidden" name="totalQuantity" value="<%= totalQuantity %>">
+        <input type="hidden" name="totalItems" value="<%= totalItems%>">
+    </form>
+</div>

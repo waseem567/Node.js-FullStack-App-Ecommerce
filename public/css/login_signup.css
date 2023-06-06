@@ -1,0 +1,26 @@
+body{
+    background: #000;
+    color: white;
+}
+form.form input.form-control{
+    background: rgb(32, 31, 31);
+    color: white !important;
+    border: 2px solid green;
+    margin: 20px 0px;
+}
+form.form .btn__bg{
+    background: green;
+    color: black;
+    font-weight: 600;
+    width: 100%;
+}
+.forgot__text{
+    color: white;
+}
+.forgot__text a{
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+.invalid{
+    border-color: red !important;
+}

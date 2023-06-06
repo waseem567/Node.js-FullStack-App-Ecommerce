@@ -1,0 +1,38 @@
+<%- include ('../includes/header.ejs')%>
+<link rel="stylesheet" href="/css/login_signup.css" />
+<%- include ('../includes/navigation.ejs')%>
+<div class="wrapper">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-4 py-2">
+        <form class="form" action="/login" method="POST">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>" />
+          <input
+            name="email"
+            class="form-control"
+            type="text"
+            placeholder="Enter Your email here"
+          />
+          <input
+            name="password"
+            class="form-control"
+            type="password"
+            placeholder="Enter Your password here"
+          />
+          <% if (validityError.length > 0) { %>
+          <% for (error  of validityError) { %>
+            <div class="text-danger">* <%= error.msg %></div>
+            <% } %>
+            <% } %>
+            <% if(flashError.length > 0){ %>
+                <div class="text-danger">* <%= flashError %></div>
+                <% } %>
+          <button class="btn btn__bg" type="submit">Login</button>
+        </form>
+        <p class="forgot__text text-center py-3">
+          <a href="#"> Forgot Your Password? </a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

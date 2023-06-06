@@ -1,0 +1,36 @@
+body {
+    background: #000;
+    color: white;
+}
+
+form {
+    background: rgb(14, 14, 14);
+    padding: 10px;
+}
+
+form label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+form .form-control::placeholder,
+form .form-control,
+form .form-control:focus {
+    background: #000 !important;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+form .form-control {
+    border: 1px solid rgb(239, 2, 46);
+    background: #000 !important;
+    font-family: 'Poppins', sans-serif;
+}
+
+.form button.add {
+    color: white;
+    background: green;
+    width: 100%;
+    font-weight: 500;
+}

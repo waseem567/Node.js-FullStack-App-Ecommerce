@@ -1,0 +1,31 @@
+.form{
+    display: flex;
+    justify-content: center;
+}
+.form .searchBar{
+    background: #443f3f;
+    border: 1px solid rgb(239, 2, 46);
+    color: white;
+}
+.form .searchBar:focus{
+    color: white;
+}
+.form .searchBar::placeholder{
+    color: white;
+}
+.form button{
+    background: rgb(239, 2, 46);
+    color: whitesmoke;
+    font-weight: 600;
+    text-transform: capitalize;
+    border: 1px solid rgb(239, 2, 46);
+    padding: 8px;
+    margin-left: 5px;
+    text-decoration: none;
+
+}
+.form button:hover{
+    border: 1px solid rgb(239, 2, 46);
+    background: black;
+    color: rgb(239, 2, 46);
+}

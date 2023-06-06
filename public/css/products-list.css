@@ -1,0 +1,182 @@
+.productBox {
+    min-height: 24rem !important;
+    background: #443f3f;
+    padding: 5px 0px;
+    border-radius: 10px !important;
+}
+
+.productBox .product_title {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.productBox .product_image {
+    height: 155px;
+    overflow: hidden;
+}
+
+.productBox .product_description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+.productBox .product_price {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    color: orangered;
+    border-bottom: 1px solid orangered;
+    padding: 0px 5px;
+}
+
+.productBox .product_image img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.image_link {
+    text-decoration: none;
+}
+
+.cart_button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: orangered;
+    border: 2px solid orangered;
+    margin: 4px;
+    background: #000;
+}
+
+.cart_button:hover {
+    color: black;
+    background: orangered;
+}
+.det_button,
+.delete_button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+    color: green;
+    border: 2px solid green;
+    margin: 4px;
+    background: #000;
+}
+
+.det_button:hover {
+    color: black;
+    border: 2px solid green;
+    background: green;
+}
+
+.product_image_detail {
+    display: block;
+    height: 23rem;
+}
+
+.product_image_detail img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.productBox .product_price_detail {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 35px;
+    color: orangered;
+    border-bottom: 1px solid orangered;
+    padding: 0px 5px;
+    text-align: center;
+    background: #000;
+}
+
+.delete_form {
+    display: inline;
+}
+
+.delete_form .delete_button {
+    background: #000;
+    border: 2px solid red;
+    color: red;
+}
+
+.delete_form .delete_button:hover {
+    background: red;
+    border: 2px solid red;
+    color: black;
+}
+
+.cart-footer {
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: #181717;
+}
+
+.order__button:hover {
+    background: green;
+    color: black;
+    border: 2px solid green;
+}
+
+.order__button {
+    background: #000;
+    color: green;
+    border: 2px solid green;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 600;
+}
+
+.total__price {
+    color: green;
+}
+
+.delete_form {
+    display: inline;
+}
+
+.delete_form .delete_button {
+    background: #000;
+    border: 2px solid red;
+    color: red;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.delete_form .delete_button:hover {
+    background: red;
+    border: 2px solid red;
+    color: black;
+}
+
+.checkout-form{
+    padding-top: 20px;
+    background: #000;
+    color: white;
+}
+.checkout-form input{
+   padding: 15px;
+   background: #181717;
+   color: white;
+   font-weight: 600;
+   border: none;
+   border-bottom: 1px solid green ;
+}

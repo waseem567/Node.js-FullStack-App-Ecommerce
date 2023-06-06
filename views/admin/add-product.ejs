@@ -1,0 +1,28 @@
+<%- include ('../includes/header.ejs')%>
+    <link rel="stylesheet" href="/css/add-product.css">
+<%- include ('../includes/navigation.ejs' , {auth : auth})%>
+<div class="container rounded mt-2 bgLight">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <% if(imageErrorMsg){ %>
+            <div class="alert alert-danger text-center"><%= imageError %></div>
+            <% } %>
+            <form class="form rounded mt-5" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                <div>
+                    <label>Title</label>
+                    <input value="<%= edit ? product.title : oldInputValues.title %>" placeholder="Enter product title..." class="form-control" type="text" name="title">
+                    <label>Price</label>
+                    <input value="<%= edit ? product.price : oldInputValues.price %>" placeholder="Enter product price..." class="form-control" type="number" name="price">
+                    <label>Image</label>
+                    <input class="form-control" type="file" name="file">
+                    <label>Description</label>
+                    <input value="<%= edit ? product.description : oldInputValues.description %>" placeholder="Enter product description..." class="form-control" type="text" name="description">
+                    <button class="btn rounded add my-4" type="submit"><%= edit ? 'Edit Product' : 'Add Product' %></button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+ 
+<%- include ('../includes/footer.ejs')%>

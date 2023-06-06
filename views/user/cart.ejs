@@ -1,0 +1,39 @@
+<%- include ('../includes/header.ejs')%>
+    <link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/products-list.css">
+<%- include ('../includes/navigation.ejs' , {auth : auth})%>
+<div class="container rounded mt-2">
+    <div class="row">
+        <h1 class="cart__items text-white">Total Price : <span class="total__price"> <%= totalPrice %> </span>  Items : <span class="total__price"> <%= items%> </span> Total Quantity : <span class="total__price"><%= totalQuantity %></span> </h1>
+        <% if (products.length > 0) { %>
+            <% for (product of products) { %>
+                <div class="col-md-4 mt-4 rounded">
+                    <a class="image_link" href="/<%= product._id %>">    
+                        <div class="productBox">
+                            <div class="product_title"><%= product.title %></div>
+                            <div class="product_image">
+                                <img src="<%= product.url %>" alt="image">
+                            </div>
+                            <div class="product_price"><%= product.price %> $</div>
+                            <div class="product_description px-2 py-1"><%= product.description %></div>
+                            <input type="hidden" name="product_id" value="<%= product._id %>">
+                            <div>
+                                <a href="/<%= product._id %>" class="btn det_button">Details</a>
+                                <form class="delete_form" action="/deleteCartProduct" method="POST">
+                                   <input class="delete_button" type="submit" value="Delete From Cart"> 
+                                   <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                                   <input type="hidden" name="productid" value="<%= product._id %>">
+                                </form>
+                              </div>
+                        </div>
+                    </a>
+                </div>
+          <% } %><% } %>
+    </div>
+</div>
+<%- include ('../includes/cart-footer.ejs' , {
+    totalItems : items,
+    totalPrice : totalPrice,
+    totalQuantity : totalQuantity
+})%>
+<%- include ('../includes/footer.ejs')%>

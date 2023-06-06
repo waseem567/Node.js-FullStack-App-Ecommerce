@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="/css/search.css">
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form class="form w-100 py-sm-2" action="/search" method="POST">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <input class="form-control searchBar" type="text" placeholder="Enter product name to search..." name="searchedProduct">
+            <button class="rounded" type="submit">search</button>
+        </form>
+    </div>
+</div>
